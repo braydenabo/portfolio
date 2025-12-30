@@ -53,16 +53,17 @@
 <body class="font-sans leading-relaxed bg-gray-100 text-gray-800 dark:bg-[#212830] dark:text-[#c9d1d9]">
     <!-- Navigation Bar -->
     <nav class="bg-white dark:bg-[#161b22] border-b border-gray-200 dark:border-[#30363d] shadow-sm sticky top-0 z-50">
-        <div class="max-w-7xl mx-auto">
-            <div class="flex items-center justify-between py-4">
-                <div class="text-xl md:text-2xl font-bold pl-0 text-gray-900 dark:text-[#c9d1d9]">Brayden Abo</div>
-                <div class="flex items-center gap-0">
-                    <ul class="rounded flex flex-wrap items-center list-none overflow-x-auto pr-0">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="flex items-center justify-between py-3 md:py-4">
+                <div class="text-xl md:text-2xl font-bold text-gray-900 dark:text-[#c9d1d9]">Brayden Abo</div>
+                <div class="flex items-center gap-2">
+                    <!-- Desktop Navigation -->
+                    <ul class="hidden md:flex rounded items-center list-none">
                         <li><a href="#about" class="nav-link font-medium transition-colors whitespace-nowrap px-3 py-1 rounded-lg text-gray-700 dark:text-[#8b949e]">About Me</a></li>
                         <li><a href="#education" class="nav-link font-medium transition-colors whitespace-nowrap px-3 py-1 rounded-lg text-gray-700 dark:text-[#8b949e]">Education</a></li>
                         <li><a href="#work" class="nav-link font-medium transition-colors whitespace-nowrap px-3 py-1 rounded-lg text-gray-700 dark:text-[#8b949e]">Work</a></li>
                         <li><a href="#projects" class="nav-link font-medium transition-colors whitespace-nowrap px-3 py-1 rounded-lg text-gray-700 dark:text-[#8b949e]">Projects</a></li>
-                        <li><a href="#personal" class="nav-link font-medium transition-colors whitespace-nowrap px-3 py-1 rounded-lg text-gray-700 dark:text-[#8b949e]">Personal Interests</a></li>
+                        <li><a href="#personal" class="nav-link font-medium transition-colors whitespace-nowrap px-3 py-1 rounded-lg text-gray-700 dark:text-[#8b949e]">Interests</a></li>
                     </ul>
                     <!-- Theme Toggle -->
                     <button id="theme-toggle" class="p-2 rounded-lg transition-colors text-gray-700 dark:text-[#8b949e] hover:bg-gray-100 dark:hover:bg-[#212830]">
@@ -86,7 +87,6 @@
                 <div class="mb-4 flex justify-center">
                     <img src="images/headshot.png" 
                          alt="Brayden Abo" 
-                         loading="eager"
                          class="w-52 h-52 md:w-64 md:h-64 rounded-lg object-cover border-2 border-gray-200 dark:border-[#30363d]">
                 </div>
                 
@@ -109,12 +109,12 @@
                 </div>
                 
                 <!-- Social Links -->
-                <div class="flex items-center justify-center gap-3 pt-4 border-t border-gray-200 dark:border-[#30363d] flex-wrap">
+                <div class="flex items-center justify-center gap-2 sm:gap-3 pt-4 border-t border-gray-200 dark:border-[#30363d] flex-wrap">
                     <a href="https://github.com/braydenabo" 
                        target="_blank" 
                        rel="noopener noreferrer"
-                       class="group flex items-center gap-2 px-4 py-2 bg-gray-100 dark:bg-[#212830] border border-gray-200 dark:border-[#30363d] rounded-lg text-sm text-gray-700 dark:text-[#c9d1d9] hover:bg-gray-200 dark:hover:bg-[#30363d] transition-colors">
-                        <svg class="w-5 h-5 transition-colors fill-gray-600 dark:fill-[#8b949e] group-hover:fill-gray-900 dark:group-hover:fill-[#c9d1d9]" viewBox="0 0 24 24">
+                       class="group flex items-center gap-1 sm:gap-2 px-2 sm:px-4 py-2 bg-gray-100 dark:bg-[#212830] border border-gray-200 dark:border-[#30363d] rounded-lg text-xs sm:text-sm text-gray-700 dark:text-[#c9d1d9] hover:bg-gray-200 dark:hover:bg-[#30363d] transition-colors">
+                        <svg class="w-4 h-4 sm:w-5 sm:h-5 transition-colors fill-gray-600 dark:fill-[#8b949e] group-hover:fill-gray-900 dark:group-hover:fill-[#c9d1d9]" viewBox="0 0 24 24">
                             <path fill-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" clip-rule="evenodd"/>
                         </svg>
                         <span>GitHub</span>
@@ -122,8 +122,8 @@
                     <a href="https://www.linkedin.com/in/brayden-abo/" 
                        target="_blank" 
                        rel="noopener noreferrer"
-                       class="group flex items-center gap-2 px-4 py-2 bg-gray-100 dark:bg-[#212830] border border-gray-200 dark:border-[#30363d] rounded-lg text-sm text-gray-700 dark:text-[#c9d1d9] hover:bg-gray-200 dark:hover:bg-[#30363d] transition-colors">
-                        <svg class="w-5 h-5 transition-colors fill-gray-600 dark:fill-[#8b949e] group-hover:fill-[#0077b5] dark:group-hover:fill-[#0077b5]" viewBox="0 0 24 24">
+                       class="group flex items-center gap-1 sm:gap-2 px-2 sm:px-4 py-2 bg-gray-100 dark:bg-[#212830] border border-gray-200 dark:border-[#30363d] rounded-lg text-xs sm:text-sm text-gray-700 dark:text-[#c9d1d9] hover:bg-gray-200 dark:hover:bg-[#30363d] transition-colors">
+                        <svg class="w-4 h-4 sm:w-5 sm:h-5 transition-colors fill-gray-600 dark:fill-[#8b949e] group-hover:fill-[#0077b5] dark:group-hover:fill-[#0077b5]" viewBox="0 0 24 24">
                             <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.065 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
                         </svg>
                         <span>LinkedIn</span>
@@ -131,8 +131,8 @@
                     <a href="braydenAboResume-2.pdf" 
                        target="_blank" 
                        rel="noopener noreferrer"
-                       class="group flex items-center gap-2 px-4 py-2 bg-gray-100 dark:bg-[#212830] border border-gray-200 dark:border-[#30363d] rounded-lg text-sm text-gray-700 dark:text-[#c9d1d9] hover:bg-gray-200 dark:hover:bg-[#30363d] transition-colors">
-                        <svg class="w-5 h-5 transition-colors stroke-gray-600 dark:stroke-[#8b949e] group-hover:stroke-blue-600 dark:group-hover:stroke-[#58a6ff]" fill="none" viewBox="0 0 24 24">
+                       class="group flex items-center gap-1 sm:gap-2 px-2 sm:px-4 py-2 bg-gray-100 dark:bg-[#212830] border border-gray-200 dark:border-[#30363d] rounded-lg text-xs sm:text-sm text-gray-700 dark:text-[#c9d1d9] hover:bg-gray-200 dark:hover:bg-[#30363d] transition-colors">
+                        <svg class="w-4 h-4 sm:w-5 sm:h-5 transition-colors stroke-gray-600 dark:stroke-[#8b949e] group-hover:stroke-blue-600 dark:group-hover:stroke-[#58a6ff]" fill="none" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
                         </svg>
                         <span>Resume</span>
@@ -172,26 +172,26 @@
                         <h2 class="text-2xl font-semibold mb-4 text-gray-500 dark:text-[#c9d1d9]">Education</h2>
                         
                         <div class="p-4 bg-gray-50 dark:bg-[#0d1117] rounded-lg border-l-4" style="border-left-color: #a22638;">
-                            <div class="flex gap-4 mb-4">
+                            <div class="flex gap-3 sm:gap-4 mb-4">
                                 <!-- Logo -->
                                 <div class="flex-shrink-0">
-                                    <div class="w-16 h-16 bg-gray-100 dark:bg-[#212830] rounded-lg flex items-center justify-center border border-gray-200 dark:border-[#30363d] overflow-hidden">
+                                    <div class="w-12 h-12 sm:w-16 sm:h-16 bg-gray-100 dark:bg-[#212830] rounded-lg flex items-center justify-center border border-gray-200 dark:border-[#30363d] overflow-hidden">
                                         <img class="w-full h-full object-cover rounded-lg" src="images/stevensLogo.jpg" alt="Stevens Institute of Technology Logo" loading="lazy">
                                     </div>
                                 </div>
                                 
                                 <!-- Education Info -->
-                                <div class="flex-1">
+                                <div class="flex-1 min-w-0">
                                     <!-- Degree and Dates -->
-                                    <div class="flex justify-between items-baseline mb-1">
-                                        <h5 class="text-base font-semibold text-gray-800 dark:text-[#c9d1d9]">Bachelor of Science in Computer Science</h5>
-                                        <span class="text-sm italic whitespace-nowrap text-gray-600 dark:text-[#8b949e]">Expected December 2026</span>
+                                    <div class="flex flex-col sm:flex-row sm:justify-between sm:items-baseline mb-1">
+                                        <h5 class="text-sm sm:text-base font-semibold text-gray-800 dark:text-[#c9d1d9]">Bachelor of Science in Computer Science</h5>
+                                        <span class="text-xs sm:text-sm italic text-gray-600 dark:text-[#8b949e]">Expected December 2026</span>
                                     </div>
                                     
                                     <!-- University and Location -->
                                     <div class="flex justify-between items-baseline">
-                                        <p class="text-sm italic text-gray-600 dark:text-[#8b949e]">Stevens Institute of Technology</p>
-                                        <p class="text-sm italic whitespace-nowrap text-gray-600 dark:text-[#8b949e]">Hoboken, NJ</p>
+                                        <p class="text-xs sm:text-sm italic text-gray-600 dark:text-[#8b949e]">Stevens Institute of Technology</p>
+                                        <p class="text-xs sm:text-sm italic text-gray-600 dark:text-[#8b949e] whitespace-nowrap ml-2">Hoboken, NJ</p>
                                     </div>
                                 </div>
                             </div>
@@ -210,26 +210,26 @@
                         <h2 class="text-2xl font-semibold mb-4 text-gray-500 dark:text-[#c9d1d9]">Work Experience</h2>
                         
                         <div class="mb-5 p-4 bg-gray-50 dark:bg-[#0d1117] rounded-lg border-l-4" style="border-left-color: #06f07b;">
-                            <div class="flex gap-4 mb-4">
+                            <div class="flex gap-3 sm:gap-4 mb-4">
                                 <!-- Logo -->
                                 <div class="flex-shrink-0">
-                                    <div class="w-16 h-16 bg-gray-100 dark:bg-[#212830] rounded-lg flex items-center justify-center border border-gray-200 dark:border-[#30363d] overflow-hidden">
+                                    <div class="w-12 h-12 sm:w-16 sm:h-16 bg-gray-100 dark:bg-[#212830] rounded-lg flex items-center justify-center border border-gray-200 dark:border-[#30363d] overflow-hidden">
                                         <img class="w-full h-full object-cover rounded-lg" src="images/walmartLogo.jpg" alt="Company Logo" loading="lazy">
                                     </div>
                                 </div>
                                 
                                 <!-- Job Info -->
-                                <div class="flex-1">
+                                <div class="flex-1 min-w-0">
                                     <!-- Job Title and Dates -->
-                                    <div class="flex justify-between items-baseline mb-1">
-                                        <h5 class="text-base font-semibold text-gray-800 dark:text-[#c9d1d9]">Software Engineer Intern</h5>
-                                        <span class="text-sm italic whitespace-nowrap text-gray-600 dark:text-[#8b949e]">June 2026 - August 2026</span>
+                                    <div class="flex flex-col sm:flex-row sm:justify-between sm:items-baseline mb-1">
+                                        <h5 class="text-sm sm:text-base font-semibold text-gray-800 dark:text-[#c9d1d9]">Software Engineer Intern</h5>
+                                        <span class="text-xs sm:text-sm italic text-gray-600 dark:text-[#8b949e]">June 2026 - August 2026</span>
                                     </div>
                                     
                                     <!-- Company and Location -->
                                     <div class="flex justify-between items-baseline">
-                                        <p class="text-sm italic text-gray-600 dark:text-[#8b949e]">Walmart Global Tech</p>
-                                        <p class="text-sm italic whitespace-nowrap text-gray-600 dark:text-[#8b949e]">Sunnyvale, CA</p>
+                                        <p class="text-xs sm:text-sm italic text-gray-600 dark:text-[#8b949e]">Walmart Global Tech</p>
+                                        <p class="text-xs sm:text-sm italic text-gray-600 dark:text-[#8b949e] whitespace-nowrap ml-2">Sunnyvale, CA</p>
                                     </div>
                                 </div>
                             </div>
@@ -240,26 +240,26 @@
                             </ul>
                         </div>
                         <div class="mb-5 p-4 bg-gray-50 dark:bg-[#0d1117] rounded-lg border-l-4" style="border-left-color: #f40a23;">
-                            <div class="flex gap-4 mb-4">
+                            <div class="flex gap-3 sm:gap-4 mb-4">
                                 <!-- Logo -->
                                 <div class="flex-shrink-0">
-                                    <div class="w-16 h-16 bg-gray-100 dark:bg-[#212830] rounded-lg flex items-center justify-center border border-gray-200 dark:border-[#30363d] overflow-hidden">
+                                    <div class="w-12 h-12 sm:w-16 sm:h-16 bg-gray-100 dark:bg-[#212830] rounded-lg flex items-center justify-center border border-gray-200 dark:border-[#30363d] overflow-hidden">
                                         <img class="w-full h-full object-cover rounded-lg" src="images/verizonLogo.webp" alt="Verizon Logo" loading="lazy">
                                     </div>
                                 </div>
                                 
                                 <!-- Job Info -->
-                                <div class="flex-1">
+                                <div class="flex-1 min-w-0">
                                     <!-- Job Title and Dates -->
-                                    <div class="flex justify-between items-baseline mb-1">
-                                        <h5 class="text-base font-semibold text-gray-800 dark:text-[#c9d1d9]">Software Engineer Intern</h5>
-                                        <span class="text-sm italic whitespace-nowrap text-gray-600 dark:text-[#8b949e]">June 2025 - August 2025</span>
+                                    <div class="flex flex-col sm:flex-row sm:justify-between sm:items-baseline mb-1">
+                                        <h5 class="text-sm sm:text-base font-semibold text-gray-800 dark:text-[#c9d1d9]">Software Engineer Intern</h5>
+                                        <span class="text-xs sm:text-sm italic text-gray-600 dark:text-[#8b949e]">June 2025 - August 2025</span>
                                     </div>
                                     
                                     <!-- Company and Location -->
                                     <div class="flex justify-between items-baseline">
-                                        <p class="text-sm italic text-gray-600 dark:text-[#8b949e]">Verizon</p>
-                                        <p class="text-sm italic whitespace-nowrap text-gray-600 dark:text-[#8b949e]">Basking Ridge, NJ</p>
+                                        <p class="text-xs sm:text-sm italic text-gray-600 dark:text-[#8b949e]">Verizon</p>
+                                        <p class="text-xs sm:text-sm italic text-gray-600 dark:text-[#8b949e] whitespace-nowrap ml-2">Basking Ridge, NJ</p>
                                     </div>
                                 </div>
                             </div>
@@ -273,28 +273,28 @@
                         </div>
 
                         <div class="mb-5 p-4 bg-gray-50 dark:bg-[#0d1117] rounded-lg border-l-4" style="border-left-color: #a22638;">
-                            <div class="flex gap-4 mb-4">
+                            <div class="flex gap-3 sm:gap-4 mb-4">
                                 <!-- Logo -->
                                 <div class="flex-shrink-0">
-                                    <div class="w-16 h-16 bg-gray-100 dark:bg-[#212830] rounded-lg flex items-center justify-center border border-gray-200 dark:border-[#30363d] overflow-hidden">
+                                    <div class="w-12 h-12 sm:w-16 sm:h-16 bg-gray-100 dark:bg-[#212830] rounded-lg flex items-center justify-center border border-gray-200 dark:border-[#30363d] overflow-hidden">
                                         <img class="w-full h-full object-cover rounded-lg" src="images/stevensLogo.jpg" alt="Stevens Institute of Technology Logo" loading="lazy">
                                     </div>
                                 </div>
                                 
                                 <!-- Company and Location (shared) -->
-                                <div class="flex-1">
+                                <div class="flex-1 min-w-0">
                                     <div class="flex justify-between items-baseline mb-4">
-                                        <p class="text-sm italic text-gray-600 dark:text-[#8b949e]">Stevens Institute of Technology</p>
-                                        <p class="text-sm italic whitespace-nowrap text-gray-600 dark:text-[#8b949e]">Hoboken, NJ</p>
+                                        <p class="text-xs sm:text-sm italic text-gray-600 dark:text-[#8b949e]">Stevens Institute of Technology</p>
+                                        <p class="text-xs sm:text-sm italic text-gray-600 dark:text-[#8b949e] whitespace-nowrap ml-2">Hoboken, NJ</p>
                                     </div>
                                 </div>
                             </div>
                             
                             <!-- First Position: Undergraduate Researcher -->
                             <div class="mb-4 pb-4 border-b border-gray-300 dark:border-[#30363d]">
-                                <div class="flex justify-between items-baseline mb-3">
-                                    <h5 class="text-base font-semibold text-gray-800 dark:text-[#c9d1d9]">Undergraduate Researcher</h5>
-                                    <span class="text-sm italic whitespace-nowrap text-gray-600 dark:text-[#8b949e]">September 2025 - Present</span>
+                                <div class="flex flex-col sm:flex-row sm:justify-between sm:items-baseline mb-3">
+                                    <h5 class="text-sm sm:text-base font-semibold text-gray-800 dark:text-[#c9d1d9]">Undergraduate Researcher</h5>
+                                    <span class="text-xs sm:text-sm italic text-gray-600 dark:text-[#8b949e]">September 2025 - Present</span>
                                 </div>
                                 
                                 <ul class="list-disc ml-6 space-y-1">
@@ -305,9 +305,9 @@
                             
                             <!-- Second Position: Teaching Assistant -->
                             <div>
-                                <div class="flex justify-between items-baseline mb-3">
-                                    <h5 class="text-base font-semibold text-gray-800 dark:text-[#c9d1d9]">Course Assistant - Operating Systems (C)</h5>
-                                    <span class="text-sm italic whitespace-nowrap text-gray-600 dark:text-[#8b949e]">January 2026 - Present</span>
+                                <div class="flex flex-col sm:flex-row sm:justify-between sm:items-baseline mb-3">
+                                    <h5 class="text-sm sm:text-base font-semibold text-gray-800 dark:text-[#c9d1d9]">Course Assistant - Operating Systems (C)</h5>
+                                    <span class="text-xs sm:text-sm italic text-gray-600 dark:text-[#8b949e]">January 2026 - Present</span>
                                 </div>
                                 
                                 <ul class="list-disc ml-6 space-y-1">
