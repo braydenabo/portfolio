@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://cdn.tailwindcss.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self' https://fonts.googleapis.com https://fonts.gstatic.com;">
     <meta name="referrer" content="strict-origin-when-cross-origin">
-    <title>Portfolio</title>
+    <title>Brayden Abo</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&display=swap" rel="stylesheet">
@@ -100,6 +100,22 @@
                     <a id="email-link" href="#" class="text-sm transition-colors break-all text-blue-600 dark:text-[#58a6ff] hover:text-blue-700 dark:hover:text-[#79c0ff]">
                         <span id="email-text">Loading...</span>
                     </a>
+                    <script>
+                        // Inline email decode as fallback
+                        (function() {
+                            const obf = [13, 111, 110, 111, 124, 77, 128, 129, 114, 131, 114, 123, 128, 59, 114, 113, 130];
+                            try {
+                                const off = obf[0];
+                                const email = String.fromCharCode(...obf.slice(1).map(c => c - off));
+                                const link = document.getElementById('email-link');
+                                const text = document.getElementById('email-text');
+                                if (link && text) {
+                                    link.href = 'mailto:' + email;
+                                    text.textContent = email;
+                                }
+                            } catch(e) {}
+                        })();
+                    </script>
                 </div>
                 
                 <!-- Location -->

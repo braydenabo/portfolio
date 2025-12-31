@@ -15,8 +15,11 @@
             if (emailLink && emailText) {
                 emailLink.href = 'mailto:' + email;
                 emailText.textContent = email;
+                return true;
             }
+            return false;
         } catch (e) {
+            console.error('Email decoding error:', e);
             // Fallback if decoding fails
             const emailLink = document.getElementById('email-link');
             const emailText = document.getElementById('email-text');
@@ -24,15 +27,35 @@
                 emailLink.href = '#';
                 emailText.textContent = 'Email unavailable';
             }
+            return false;
         }
+    }
+    
+    // Try multiple methods to ensure it runs
+    function attemptDecode() {
+        if (decodeEmail()) {
+            return; // Success
+        }
+        
+        // If elements not found yet, try again after a short delay
+        setTimeout(() => {
+            if (!decodeEmail()) {
+                // Last resort: try one more time after longer delay
+                setTimeout(decodeEmail, 100);
+            }
+        }, 50);
     }
     
     // Decode email when DOM is ready
     if (document.readyState === 'loading') {
-        document.addEventListener('DOMContentLoaded', decodeEmail);
+        document.addEventListener('DOMContentLoaded', attemptDecode);
     } else {
-        decodeEmail();
+        // DOM already loaded, try immediately
+        attemptDecode();
     }
+    
+    // Also try on window load as a fallback
+    window.addEventListener('load', decodeEmail);
 })();
 
 // Smooth scroll behavior for navigation links
@@ -40,8 +63,8 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
         const href = this.getAttribute('href');
         
-        // Only process links that start with # (skip mailto: and other protocols)
-        if (!href || !href.startsWith('#')) {
+        // Only process links that start with # and have a valid target (skip # alone, mailto:, etc.)
+        if (!href || !href.startsWith('#') || href === '#') {
             return; // Let the link work normally
         }
         
