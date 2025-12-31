@@ -1,8 +1,52 @@
+// Email obfuscation - decode on page load
+(function() {
+    const obfuscated = [13, 111, 110, 111, 124, 77, 128, 129, 114, 131, 114, 123, 128, 59, 114, 113, 130];
+    
+    function decodeEmail() {
+        try {
+            // Decode using reverse character code shift
+            const offset = obfuscated[0];
+            const charCodes = obfuscated.slice(1);
+            const email = String.fromCharCode(...charCodes.map(c => c - offset));
+            
+            const emailLink = document.getElementById('email-link');
+            const emailText = document.getElementById('email-text');
+            
+            if (emailLink && emailText) {
+                emailLink.href = 'mailto:' + email;
+                emailText.textContent = email;
+            }
+        } catch (e) {
+            // Fallback if decoding fails
+            const emailLink = document.getElementById('email-link');
+            const emailText = document.getElementById('email-text');
+            if (emailLink && emailText) {
+                emailLink.href = '#';
+                emailText.textContent = 'Email unavailable';
+            }
+        }
+    }
+    
+    // Decode email when DOM is ready
+    if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', decodeEmail);
+    } else {
+        decodeEmail();
+    }
+})();
+
 // Smooth scroll behavior for navigation links
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
+        const href = this.getAttribute('href');
+        
+        // Only process links that start with # (skip mailto: and other protocols)
+        if (!href || !href.startsWith('#')) {
+            return; // Let the link work normally
+        }
+        
         e.preventDefault();
-        const target = document.querySelector(this.getAttribute('href'));
+        const target = document.querySelector(href);
         if (target) {
             const targetId = target.getAttribute('id');
             

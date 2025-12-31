@@ -3,6 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://cdn.tailwindcss.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self' https://fonts.googleapis.com https://fonts.gstatic.com;">
+    <meta name="referrer" content="strict-origin-when-cross-origin">
     <title>Portfolio</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -95,8 +97,8 @@
                 
                 <!-- Email -->
                 <div class="mb-4 text-center">
-                    <a href="babo@stevens.edu" class="text-sm transition-colors break-all text-blue-600 dark:text-[#58a6ff] hover:text-blue-700 dark:hover:text-[#79c0ff]">
-                        babo@stevens.edu
+                    <a id="email-link" href="#" class="text-sm transition-colors break-all text-blue-600 dark:text-[#58a6ff] hover:text-blue-700 dark:hover:text-[#79c0ff]">
+                        <span id="email-text">Loading...</span>
                     </a>
                 </div>
                 
@@ -128,7 +130,7 @@
                         </svg>
                         <span>LinkedIn</span>
                     </a>
-                    <a href="braydenAboResume-2.pdf" 
+                    <a href="images/braydenAboResume-2.pdf" 
                        target="_blank" 
                        rel="noopener noreferrer"
                        class="group flex items-center gap-1 sm:gap-2 px-2 sm:px-4 py-2 bg-gray-100 dark:bg-[#212830] border border-gray-200 dark:border-[#30363d] rounded-lg text-xs sm:text-sm text-gray-700 dark:text-[#c9d1d9] hover:bg-gray-200 dark:hover:bg-[#30363d] transition-colors">
